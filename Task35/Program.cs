@@ -67,5 +67,11 @@ int[] arr = CreateArray(arraySize, arrayMin, arrayMax);
 // вывод массива в строку
 string initArrayOut = PrintArrayAsString(arr);
 // результат проверки вхождения в диапазон [10,99]
-int result = CountIsInRange(arr);
-Console.WriteLine($"{initArrayOut} -> {result}");
+// int result = CountIsInRange(arr);
+Console.Write("Задайте нижнюю границу диапазона: ");
+int lowerNum = Convert.ToInt32(Console.ReadLine());
+Console.Write("Задайте верхнюю границу диапазона: ");
+int upperNum = Convert.ToInt32(Console.ReadLine());
+int result = CountIsInRange(arr, lowerNum, upperNum);
+// вывод в консоль результата
+Console.WriteLine($"Вхождений в диапазон [{lowerNum},{upperNum}] в массиве {initArrayOut} -> {result}");
