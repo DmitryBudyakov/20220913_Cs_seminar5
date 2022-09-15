@@ -39,16 +39,14 @@ string PrintArrayAsString(int[] array)  // возвращает элементы
 
 bool IsElemInArray(int[] array, int num)    // проверяет есть ли заданный элемент в массиве или нет
 {
-    int i = 0;
     bool result = false;
-    while (i < array.Length)
+    for (int i = 0; i < array.Length; i++)
     {
         if (array[i] == num)
         {
             result = true;
             break;
         }
-        i++;
     }
     return result;
 }
